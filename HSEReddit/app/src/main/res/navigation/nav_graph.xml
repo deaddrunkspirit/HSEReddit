@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.hsereddit.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.hsereddit.fragments.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.hsereddit.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.example.hsereddit.fragments.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post">
+        <action
+            android:id="@+id/action_addPostFragment_to_addFragment"
+            app:popUpTo="@id/addFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addThemeFragment"
+        android:name="com.example.hsereddit.fragments.AddThemeFragment"
+        android:label="fragment_add_theme"
+        tools:layout="@layout/fragment_add_theme" >
+        <action
+            android:id="@+id/action_addThemeFragment_to_addFragment"
+            app:popUpTo="@id/addFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.hsereddit.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_themeFragment"
+            app:destination="@id/themeFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.hsereddit.fragments.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_postFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_themeFragment"
+            app:destination="@+id/themeFragment"/>
+        <action
+            android:id="@+id/action_postFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editPostFragment"
+        android:name="com.example.hsereddit.fragments.EditPostFragment"
+        android:label="fragment_edit_post"
+        tools:layout="@layout/fragment_edit_post">
+        <action
+            android:id="@+id/action_editPostFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.hsereddit.fragments.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" >
+        <action
+            android:id="@+id/action_commentsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/themeFragment"
+        android:name="com.example.hsereddit.fragments.ThemeFragment"
+        android:label="fragment_theme"
+        tools:layout="@layout/fragment_theme" >
+        <action
+            android:id="@+id/action_themeFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.hsereddit.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.hsereddit.fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+        <action
+            android:id="@+id/action_addFragment_to_addThemeFragment"
+            app:destination="@id/addThemeFragment" />
+    </fragment>
+</navigation>
