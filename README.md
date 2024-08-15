@@ -1,6 +1,7 @@
 # *__HSE Reddit__*
+Course work 2022
 ### __About__
-An Android app for HSE students and employees.
+Android app for HSE students and employees.
 HSE Reddit - is a forum where you can post news or article in a convinient way.
 
 
